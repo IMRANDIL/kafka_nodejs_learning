@@ -23,7 +23,7 @@ const { Kafka } = require('kafkajs');
     // Create a Kafka topic
     await admin.createTopics({
       topics: [
-        { topic: 'LearningKafka', numPartitions: 2 }
+        { topic: 'LearningKafka', numPartitions: 2, replicationFactor: 1 }
       ]
     });
     console.log('Topic created>>>>>>>>>>>>>>>>');
